@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" ng-app="teamModule">
+  <head>
+    <meta charset="utf-8">
+    <title>Google Phone Gallery</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="app.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-controller="TeamListController">
+	<div ng-repeat="team in teams">
+		<h3>{{team.teamName}}
+		<ul>
+			<li ng-repeat="player in team.players">
+				{{player.name}} {{player.position}} {{player.team}}
+			</li>
+		</ul>
+	</div>
+  </body>
+</html>
